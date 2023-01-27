@@ -148,6 +148,7 @@ hr {
   line-height: 2;
 }
 .districts {
+  box-sizing: border-box;
   padding: 20px;
   display: flex;
   width: 100%;
@@ -203,10 +204,17 @@ hr {
     transform: scale(1);
   }
 }
+@media (max-width: 800px) {
+  html, body .alappuzha {
+  font-size:x-large;
+  overflow-x: hidden;
+  }
+}
 
 .alappuzha {
+  margin: 0;
   text-align: center;
-  padding: 100px;
+  padding:100px 0px 100px;
   color: #090557;
   font-size: 50pt;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -216,6 +224,7 @@ hr {
 }
 .container6 {
   background-color: #e7f3f8;
+  box-sizing: border-box;
 }
 .card-deck {
   width: 75%;
