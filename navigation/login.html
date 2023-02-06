@@ -15,15 +15,14 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="../css/style.css" />
     <title>Kerala Tourism</title>
   </head>
+  <!--------------------------------navbar----------------------------------->
   <body class="loginbody color-change-2x">
     <header>
-      <nav
-        class="navbar navbar-expand-lg"
-        style="background-color:#458DA6"
-      >
+      <nav class="navbar navbar-expand-lg" style="background-color: #458da6">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html">
             <img
@@ -49,46 +48,54 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item p-2">
-                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="./loginValidated.html">Home</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+    <!-----------------------------form------------------------------->
     <div class="container">
       <div class="container1 mx-auto">
-        <form>
+        <form action="./loginValidated.html">
+          <!-------form heading-------------->
           <div class="heading p-3">
             <h3>Login</h3>
           </div>
-          <div class="mb-3 p-2">
-            <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
-            >
+          <!---------------email---------------------->
+          <div class="col-12 mb-3 p-2">
+            <label for="inputEmail4" class="form-label">Email</label>
             <input
-              type="email"
+              type="email1"
               class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              placeholder="Email address"
+              id="email1"
+              onkeyup="validateEmail() "
             />
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
-            </div>
+            <span id="email1-error"></span>
           </div>
-          <div class="mb-3 p-2">
-            <label for="exampleInputPassword1" class="form-label"
-              >Password</label
-            >
+          <!----------------------password----------------------->
+          <div class="col-12 mb-3 p-2">
+            <label for="inputPassword4" class="form-label">Password</label>
             <input
               type="password"
               class="form-control"
-              id="exampleInputPassword1"
+              placeholder="Password"
+              id="password"
+              onkeyup="validatePassword()"
             />
+            <span id="password-error"></span>
           </div>
           <br />
-          <button type="submit" class="btn btn-primary mb-3 login">
-            Submit
+          <br />
+          <!--------------login button------------------------->
+          <button
+            type="submit"
+            onclick="return validateForm()"
+            class="btn btn-primary mb-3 p-2 login"
+          >
+            Login
           </button>
           <br />
           <br />
@@ -110,4 +117,5 @@
     <br />
     <br />
   </body>
+  <script src="login.js"></script>
 </html>

@@ -96,12 +96,19 @@ hr {
 
 /* Signup */
 
+span{
+  color: red;
+}
+
+span >span{
+  color: green;
+}
 .container2 {
   border: 2px solid rgb(29, 30, 22);
   width: 350px;
-  margin-top: 50px;
+  margin-top: 10px;
   background-color: transparent;
-  padding: 20px;
+  padding: 10px;
 }
 .heading1 {
   color: rgb(57, 35, 6);
@@ -109,6 +116,9 @@ hr {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 .signup {
+  width: 100%;
+}
+input{
   width: 100%;
 }
 .signupbody {
@@ -156,6 +166,7 @@ hr {
 }
 
 /* alappuzha district */
+
 .pulsate-fwd {
   -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
   animation: pulsate-fwd 0.5s ease-in-out infinite both;
